@@ -1,7 +1,7 @@
 <template>
-  <v-container class="sidebar">
-    <v-row v-for="item in contensList" :key="item" justify="end" class="pa-4"
-      ><v-btn text>{{ item }}</v-btn></v-row
+  <v-container class="sidemenu">
+    <v-row v-for="item in contentsList" :key="item" justify="end" class="pa-4"
+      ><v-btn text style="color:#fffffe">{{ item }}</v-btn></v-row
     >
   </v-container>
 </template>
@@ -10,14 +10,17 @@
 export default {
   data() {
     return {
-      contensList: ["About", "Carrer", "Skills", "Product"],
+      contentsList: ["About", "Career", "Skills", "Product"],
     };
   },
+  components: {},
 };
 </script>
 
 <style>
-.sidebar {
+.sidemenu {
+  height: 15rem;
   position: fixed;
+  z-index: 1;
 }
 </style>
