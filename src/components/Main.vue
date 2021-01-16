@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <side-menu></side-menu>
+    <side-menu class="justify-content-end"></side-menu>
   </v-container>
 </template>
 
