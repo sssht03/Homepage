@@ -1,14 +1,14 @@
 <template>
   <v-container>
-    <Header></Header>
+    <side-menu></side-menu>
   </v-container>
 </template>
 
 <script>
-import Header from "./Header";
+import SideMenu from "./SideMenu.vue";
 export default {
-  name: "HelloWorld",
-  components: { Header },
+  name: "Main",
+  components: { SideMenu },
 
   data: () => ({}),
 };
