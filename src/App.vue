@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <v-main>
       <Main></Main>
     </v-main>
@@ -21,3 +21,10 @@ export default {
   }),
 };
 </script>
+
+<style>
+#app {
+  background-color: #16161a;
+  color: #fffffe;
+}
+</style>
