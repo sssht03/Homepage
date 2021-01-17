@@ -1,6 +1,6 @@
 <template>
-  <v-row justify="center">
-    <v-timeline align-top dense>
+  <v-row justify="center" class="career">
+    <v-timeline align-top dark>
       <v-timeline-item
         color="#7f5af0"
         small
@@ -31,27 +31,27 @@ export default {
       years: [
         {
           year: "2016/3",
-          desc: "長崎県立 長崎東高等学校 卒業",
+          desc: "長崎県立\n長崎東高等学校\n卒業",
         },
         {
           year: "2016/4",
-          desc: "九州大学工学部 電気情報工学科 入学",
+          desc: "九州大学工学部\n電気情報工学科\n入学",
         },
         {
           year: "2020/3",
-          desc: "九州大学工学部 電気情報工学科 卒業",
+          desc: "九州大学工学部\n電気情報工学科\n卒業",
         },
         {
           year: "2020/4",
-          desc: "九州大学大学院 システム情報科学府 研究生 入学",
+          desc: "九州大学大学院\nシステム情報科学府(研究生)\n入学",
         },
         {
           year: "2021/3",
-          desc: "九州大学大学院 システム情報科学府 研究生 卒業",
+          desc: "九州大学大学院\nシステム情報科学府(研究生)\n卒業予定",
         },
         {
           year: "2021/4",
-          desc: "九州大学大学院 システム情報科学府 入学予定",
+          desc: "九州大学大学院\nシステム情報科学府\n入学予定",
         },
       ],
     };
@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style>
+.career {
+  background-color: #16161a;
+}
 .career-desc {
   color: #94a1b2;
 }

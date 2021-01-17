@@ -1,14 +1,14 @@
 <template>
-  <v-container>
+  <div class="about">
     <v-row justify="center">
       <v-avatar size="15rem">
         <img src="@/assets/images/my_image.jpg" alt="My Image" />
       </v-avatar>
     </v-row>
-    <h1 class="text-center mt-10 my-name">SHUTA MATSUO</h1>
-    <v-row class="pa-6">
+    <h1 class="text-center my-name">SHUTA MATSUO</h1>
+    <v-row class="title" justify="center">
       <v-col
-        class="py-10"
+        class=""
         v-for="item in myProfile"
         :key="item[1]"
         cols="6"
@@ -18,17 +18,19 @@
         xl="4"
       >
         <v-row class="flex-column" justify="center" align-content="center">
-          <v-col class="title">
-            <h4 class="title-text">{{ item.title }}</h4>
+          <v-col>
+            <h4 class="title-text text-center">
+              {{ item.title }}
+            </h4>
           </v-col>
 
           <v-col class="desc"
-            ><h4>{{ item.desc }}</h4></v-col
+            ><h5>{{ item.desc }}</h5></v-col
           >
         </v-row>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -49,15 +51,16 @@ export default {
 </script>
 
 <style>
+.about {
+  background-color: #242629;
+}
 .my-name {
   color: #fffffe;
-}
-.title {
-  border-bottom: 2px solid #7f5af0;
 }
 
 .title-text {
   text-align: center;
+  border-bottom: 2px solid #7f5af0;
   color: #fffffe;
 }
 
