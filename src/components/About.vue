@@ -19,11 +19,11 @@
       >
         <v-row class="flex-column" justify="center" align-content="center">
           <v-col class="title">
-            <h4 class="title-text">{{ item[0] }}</h4>
+            <h4 class="title-text">{{ item.title }}</h4>
           </v-col>
 
           <v-col class="desc"
-            ><h4>{{ item[1] }}</h4></v-col
+            ><h4>{{ item.desc }}</h4></v-col
           >
         </v-row>
       </v-col>
@@ -36,12 +36,12 @@ export default {
   data() {
     return {
       myProfile: [
-        ["職業", "学生"],
-        ["所属", "九州大学工学府\nシステム情報工学科"],
-        ["誕生日", "1998/03/11"],
-        ["出身地", "長崎"],
-        ["在住", "福岡"],
-        ["好きなこと", "お酒を飲む\nバンドを聴く"],
+        { title: "職業", desc: "学生" },
+        { title: "所属", desc: "九州大学大学院\nシステム情報科学府" },
+        { title: "誕生日", desc: "1998/03/11" },
+        { title: "出身地", desc: "長崎" },
+        { title: "在住", desc: "福岡" },
+        { title: "好きなこと", desc: "お酒を飲む\nバンドを聴く" },
       ],
     };
   },

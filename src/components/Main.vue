@@ -4,17 +4,19 @@
     <v-container class="image-background"></v-container>
     <v-container class="main-items">
       <about></about>
-      <div style="height:2000px"></div>
+      <career></career>
+      <!-- <div style="height:2000px"></div> -->
     </v-container>
   </v-container>
 </template>
 
 <script>
 import About from "./About.vue";
+import Career from "./Career.vue";
 import SideMenu from "./SideMenu.vue";
 export default {
   name: "Main",
-  components: { SideMenu, About },
+  components: { SideMenu, About, Career },
 
   data: () => ({}),
 };
