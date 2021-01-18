@@ -24,7 +24,6 @@ export default {
 
 <style>
 #app {
-  color: #fffffe;
   white-space: pre-line;
 }
 </style>

@@ -1,15 +1,20 @@
-<template id="career">
+<template>
   <v-row justify="center" class="career">
-    <v-timeline align-top dark class="timeline">
+    <v-timeline
+      align-top
+      dark
+      class="timeline mx-10"
+      :dense="$vuetify.breakpoint.xsOnly"
+    >
       <v-timeline-item
-        color="#7f5af0"
+        color="#ff8906"
         small
         v-for="(item, i) in years"
         :key="i"
       >
-        <v-row class="">
-          <v-col cols="3" sm="3" md="3" lg="3" xl="4">
-            <h3 class="text-start">
+        <v-row class="mx-auto">
+          <v-col>
+            <h3 class="text-start career-year">
               {{ item.year }}
             </h3>
           </v-col>
@@ -62,6 +67,10 @@ export default {
 <style>
 .career {
   background-color: #16161a;
+}
+
+.career-year {
+  color: #ff8906;
 }
 .career-desc {
   color: #94a1b2;

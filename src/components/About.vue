@@ -1,37 +1,39 @@
 <template>
-  <div class="about">
-    <v-row justify="center">
-      <v-avatar size="15rem">
-        <img src="@/assets/images/my_image.jpg" alt="My Image" />
-      </v-avatar>
-    </v-row>
-    <h1 class="text-center my-name">SHUTA MATSUO</h1>
-    <v-container>
+  <v-row class="about">
+    <v-col>
       <v-row justify="center">
-        <v-col
-          v-for="item in myProfile"
-          :key="item[1]"
-          cols="6"
-          sm="4"
-          md="4"
-          lg="4"
-          xl="4"
-        >
-          <v-row class="flex-column">
-            <v-col>
-              <h4 class="title-text text-center">
-                {{ item.title }}
-              </h4>
-            </v-col>
-            <div class="divider mx-auto"></div>
-            <v-col class="desc text-center">
-              <h5>{{ item.desc }}</h5>
-            </v-col>
-          </v-row>
-        </v-col>
+        <v-avatar size="10rem">
+          <img src="@/assets/images/my_image.jpg" alt="My Image" />
+        </v-avatar>
       </v-row>
-    </v-container>
-  </div>
+      <h1 class="text-center my-name">SHUTA MATSUO</h1>
+      <v-container>
+        <v-row justify="center">
+          <v-col
+            v-for="item in myProfile"
+            :key="item[1]"
+            cols="6"
+            sm="4"
+            md="4"
+            lg="4"
+            xl="4"
+          >
+            <v-row class="flex-column">
+              <v-col>
+                <h4 class="title-text text-center">
+                  {{ item.title }}
+                </h4>
+              </v-col>
+              <div class="divider mx-auto"></div>
+              <v-col class="desc text-center">
+                <h5>{{ item.desc }}</h5>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
