@@ -1,6 +1,6 @@
-<template>
+<template id="career">
   <v-row justify="center" class="career">
-    <v-timeline align-top dark>
+    <v-timeline align-top dark class="timeline">
       <v-timeline-item
         color="#7f5af0"
         small
@@ -65,5 +65,8 @@ export default {
 }
 .career-desc {
   color: #94a1b2;
+}
+.timeline {
+  z-index: 0;
 }
 </style>
