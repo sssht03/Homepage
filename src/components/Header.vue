@@ -1,9 +1,15 @@
 <template>
-  <v-app-bar fixed color="#72757e">
+  <v-app-bar fixed color="rgba(114, 117, 126, 0.7)">
     <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn text v-for="item in contentsList" :key="item">{{ item }}</v-btn>
-    </v-toolbar-items>
+    <v-row align-content="end">
+      <v-btn
+        text
+        v-for="(item, i) in contentsList"
+        :key="i"
+        :color="item.show ? '#fffffe' : '#000000'"
+        >{{ item.title }}</v-btn
+      >
+    </v-row>
   </v-app-bar>
 </template>
 
@@ -11,14 +17,15 @@
 export default {
   data() {
     return {
-      contentsList: ["about", "career", "skills", "product"],
+      contentsList: [
+        { title: "about", show: false },
+        { title: "career", show: false },
+        { title: "skills", show: false },
+        { title: "product", show: false },
+      ],
     };
   },
 };
 </script>
 
-<style>
-.appbar {
-  color: #010101;
-}
-</style>
+<style></style>

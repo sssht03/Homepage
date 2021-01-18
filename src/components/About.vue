@@ -1,12 +1,13 @@
 <template>
-  <v-row class="about">
+  <v-row class="about pb-12">
     <v-col>
-      <v-row justify="center">
+      <section-title :title="'About'"></section-title>
+      <v-row justify="center" class="py-6">
         <v-avatar size="10rem">
           <img src="@/assets/images/my_image.jpg" alt="My Image" />
         </v-avatar>
       </v-row>
-      <h1 class="text-center my-name">SHUTA MATSUO</h1>
+      <h1 class="text-center my-name py-6">SHUTA MATSUO</h1>
       <v-container>
         <v-row justify="center">
           <v-col
@@ -37,7 +38,9 @@
 </template>
 
 <script>
+import SectionTitle from "./SectionTitle.vue";
 export default {
+  components: { SectionTitle },
   data() {
     return {
       myProfile: [
@@ -56,6 +59,7 @@ export default {
 <style>
 .about {
   background-color: #242629;
+  padding-top: 50px;
 }
 .my-name {
   color: #fffffe;

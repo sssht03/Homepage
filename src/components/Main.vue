@@ -15,9 +15,5 @@ import Skills from "./Skills.vue";
 export default {
   name: "Main",
   components: { About, Career, Skills, Header },
-
-  data: () => ({}),
 };
 </script>
-
-<style></style>

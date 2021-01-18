@@ -1,36 +1,43 @@
 <template>
-  <v-row justify="center" class="career">
-    <v-timeline
-      align-top
-      dark
-      class="timeline mx-10"
-      :dense="$vuetify.breakpoint.xsOnly"
-    >
-      <v-timeline-item
-        color="#ff8906"
-        small
-        v-for="(item, i) in years"
-        :key="i"
-      >
-        <v-row class="mx-auto">
-          <v-col>
-            <h3 class="text-start career-year">
-              {{ item.year }}
-            </h3>
-          </v-col>
-          <v-col cols="12" sm="12" md="12" lg="12" xl="12">
-            <h4 class="text-start career-desc">
-              {{ item.desc }}
-            </h4>
-          </v-col>
-        </v-row>
-      </v-timeline-item>
-    </v-timeline>
+  <v-row class="career pb-12">
+    <v-col>
+      <section-title :title="'Career'"></section-title>
+      <v-row justify="center">
+        <v-timeline
+          align-top
+          dark
+          class="timeline mx-10"
+          :dense="$vuetify.breakpoint.smAndDown"
+        >
+          <v-timeline-item
+            color="#ff8906"
+            small
+            v-for="(item, i) in years"
+            :key="i"
+          >
+            <v-row>
+              <v-col>
+                <h3 class="text-start career-year">
+                  {{ item.year }}
+                </h3>
+              </v-col>
+              <v-col cols="12" sm="12" md="12" lg="12" xl="12">
+                <h4 class="text-start career-desc">
+                  {{ item.desc }}
+                </h4>
+              </v-col>
+            </v-row>
+          </v-timeline-item>
+        </v-timeline>
+      </v-row>
+    </v-col>
   </v-row>
 </template>
 
 <script>
+import SectionTitle from "./SectionTitle.vue";
 export default {
+  components: { SectionTitle },
   data() {
     return {
       years: [
