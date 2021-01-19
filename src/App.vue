@@ -1,8 +1,6 @@
 <template>
   <v-app id="app">
-    <v-main>
-      <Main></Main>
-    </v-main>
+    <Main></Main>
   </v-app>
 </template>
 
@@ -16,14 +14,15 @@ export default {
     Main,
   },
 
-  data: () => ({
-    //
-  }),
+  data: () => ({}),
 };
 </script>
 
 <style>
 #app {
   white-space: pre-line;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
 }
 </style>

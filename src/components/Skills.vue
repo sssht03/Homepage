@@ -1,50 +1,52 @@
 <template>
-  <v-row class="skills pb-12">
-    <v-col>
-      <section-title :title="'Skills'"></section-title>
-    </v-col>
+  <v-container class="skills pb-12" fluid>
     <v-row>
-      <v-col
-        v-for="(item, i) in skillList"
-        :key="i"
-        cols="12"
-        sm="6"
-        md="4"
-        lg="4"
-        xl="4"
-      >
-        <v-card
-          class="mx-auto py-6"
-          max-width="280"
-          elevation="3"
-          color="#16161a"
-          @click="item.show = !item.show"
-          dark
-        >
-          <v-layout justify-center>
-            <v-img :src="item.src" max-height="150" max-width="150"></v-img>
-          </v-layout>
-          <v-card-title>{{ item.name }}</v-card-title>
-          <v-row justify="space-between" class="mx-auto">
-            <v-card-subtitle>{{ item.subtitle }}</v-card-subtitle>
-            <v-card-actions>
-              <v-btn icon>
-                <v-icon>{{
-                  item.show ? "mdi-chevron-up" : "mdi-chevron-down"
-                }}</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-row>
-          <v-expand-transition>
-            <div v-show="item.show">
-              <v-divider></v-divider>
-              <v-card-text>{{ item.text }}</v-card-text>
-            </div>
-          </v-expand-transition>
-        </v-card>
+      <v-col>
+        <section-title :title="'Skills'"></section-title>
       </v-col>
+      <v-row justify="center" class="ma-0">
+        <v-col
+          v-for="(item, i) in skillList"
+          :key="i"
+          cols="12"
+          sm="6"
+          md="4"
+          lg="4"
+          xl="4"
+        >
+          <v-card
+            class="mx-auto py-6"
+            max-width="280"
+            elevation="3"
+            color="#16161a"
+            @click="item.show = !item.show"
+            dark
+          >
+            <v-layout justify-center>
+              <v-img :src="item.src" max-height="150" max-width="150"></v-img>
+            </v-layout>
+            <v-card-title>{{ item.name }}</v-card-title>
+            <v-row justify="space-between" class="mx-auto">
+              <v-card-subtitle>{{ item.subtitle }}</v-card-subtitle>
+              <v-card-actions>
+                <v-btn icon>
+                  <v-icon>{{
+                    item.show ? "mdi-chevron-up" : "mdi-chevron-down"
+                  }}</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-row>
+            <v-expand-transition>
+              <div v-show="item.show">
+                <v-divider></v-divider>
+                <v-card-text>{{ item.text }}</v-card-text>
+              </div>
+            </v-expand-transition>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-row>
-  </v-row>
+  </v-container>
 </template>
 
 <script>
