@@ -4,6 +4,7 @@
     <v-row align-content="end">
       <v-btn
         text
+        small
         v-for="(item, i) in contentsList"
         :key="i"
         :color="item.show ? '#fffffe' : '#000000'"
