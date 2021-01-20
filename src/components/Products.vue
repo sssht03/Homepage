@@ -1,17 +1,73 @@
 <template>
-  <v-row class="products flex-column" justify="center">
-    <v-col>
-      <section-title :title="'Products'"></section-title>
-    </v-col>
-    <v-col class="subtitle">
-      <v-col>
-        <h1>In Progress</h1>
+  <v-container class="products pb-12 pt-12" fluid>
+    <section-title :title="'Products'"></section-title>
+    <v-row class="flex-column">
+      <v-col class="subtitle text-center">
+        <v-col>
+          <h1>In Progress</h1>
+        </v-col>
       </v-col>
-      <v-col>
-        <h1>Past Works</h1>
+    </v-row>
+    <v-container>
+      <v-row justify="center">
+        <v-col
+          v-for="(item, i) in inprogress"
+          :key="i"
+          cols="12"
+          sm="6"
+          md="6"
+          lg="6"
+          xl="4"
+        >
+          <v-row class="flex-column">
+            <v-col class="system-title text-center">
+              <h3>
+                {{ item.title }}
+              </h3>
+            </v-col>
+            <div class="divider mx-auto my-4"></div>
+            <v-col class="system-desc text-center px-10">
+              <h4>{{ item.desc }}</h4>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-row class="flex-column">
+      <v-col class="subtitle text-center">
+        <v-col>
+          <h1>Past Works</h1>
+        </v-col>
       </v-col>
-    </v-col>
-  </v-row>
+    </v-row>
+
+    <v-container>
+      <v-row justify="center">
+        <v-col
+          v-for="(item, i) in pastworks"
+          :key="i"
+          cols="12"
+          sm="6"
+          md="6"
+          lg="6"
+          xl="4"
+        >
+          <v-row class="flex-column">
+            <v-col class="system-title text-center">
+              <h3>
+                {{ item.title }}
+              </h3>
+            </v-col>
+            <div class="divider mx-auto my-4"></div>
+            <v-col class="system-desc text-center px-10">
+              <h4>{{ item.desc }}</h4>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-container>
 </template>
 
 <script>
@@ -20,17 +76,50 @@ export default {
   data() {
     return {
       inprogress: [
-        { title: "", desc: "", skill: "" },
-        { title: "", desc: "", skill: "" },
-        { title: "", desc: "", skill: "" },
+        {
+          title:
+            "九大 × docomo\n「3密回避実証実験」\nPoC システム, モバイルアプリ開発",
+          desc:
+            "九州大学とNTTdocomoによるポイント付与を用いての3密回避を促す実証実験で使用する, サーバやモバイルアプリなどのシステム開発に参加しています。主に九州大学の学生で構成される産学連携プラットフォームである「iQ Lab」として開発に携わっており, システム開発のみでなく, テスターの募集や実験シナリオの考案などの運営やサポート業務も行っています。",
+          skill: [
+            "Flutter",
+            "Firebase Authentification",
+            "Firebase Analytics",
+            "Firebase Cloud Messaging",
+            "Firebase Dynamic Links",
+          ],
+        },
+        {
+          title: "株式会社INNOVATION PLUS\nインターン\nPoC モバイルアプリ開発",
+          desc:
+            "九州大学の学生とIoTを中心とした事業を展開する企業との産学連携とIOT Innovation創出を目的とした組織であるIOT INNOVATION Baseのプロジェクトの一環として, 株式会社INNOVATION PLUSでPoCモバイルアプリ開発インターンを行っています。サービスの予約や支払い, Bluetooth通信機能などが含まれます。",
+          skill: ["Flutter"],
+        },
+        {
+          title:
+            "バス停混雑度可視化システム itocon\nフロント, モバイルアプリ開発",
+          desc:
+            "九州大学システム情報科学府ヒューマノフィリック研究室のプロジェクトであるバス停の混雑度をリアルタイムで可視化するアプリのシステム開発に参加しています。プロジェクト発足時の対象バス停は4つのみでしたが, 設置センサが増えることやページ更新の効率を考えVue.jsを用いてページビューを再設計しました。また, お気に入りバス停やユーザへの通知機能などの拡張性を持たせるためにiOS/Android対応のモバイルアプリも開発中です。",
+          skill: [
+            "Vue.js",
+            "vuetify(CSS Framework)",
+            "Flutter",
+            "Firebase Cloud Messaging",
+          ],
+        },
       ],
       pastworks: [
-        { title: "", desc: "", skill: "" },
-        { title: "", desc: "", skill: "" },
-        { title: "", desc: "", skill: "" },
-        { title: "", desc: "", skill: "" },
-        { title: "", desc: "", skill: "" },
-        { title: "", desc: "", skill: "" },
+        {
+          title: "ダッシュボード作成",
+          desc:
+            "保存されているCSVデータから条件を複数選択して情報を表示させるダッシュボードを作成しました。フロントをVue.js, バックエンドをPythonフレームワークであるFlaskを使用しています",
+          skill: ["Vue", "Vuetify", "Python", "Flask", "Heroku"],
+        },
+        // { title: "", desc: "", skill: [] },
+        // { title: "", desc: "", skill: [] },
+        // { title: "", desc: "", skill: [] },
+        // { title: "", desc: "", skill: [] },
+        // { title: "", desc: "", skill: [] },
       ],
     };
   },
@@ -45,7 +134,18 @@ export default {
 
 .subtitle {
   color: #f25f4c;
-  font-size: 1.2rem;
-  text-align: center;
+}
+
+.system-title {
+  color: aliceblue;
+}
+
+.divider {
+  background-color: #ff8906;
+  width: 6rem;
+}
+
+.system-desc {
+  color: #a7a9be;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-container class="skills pb-12" fluid>
-    <v-row>
+    <v-row class="flex-column">
       <v-col>
         <section-title :title="'Skills'"></section-title>
       </v-col>

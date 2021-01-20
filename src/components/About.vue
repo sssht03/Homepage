@@ -22,13 +22,13 @@
             >
               <v-row class="flex-column">
                 <v-col>
-                  <h4 class="title-text text-center">
+                  <h3 class="title-text text-center">
                     {{ item.title }}
-                  </h4>
+                  </h3>
                 </v-col>
                 <div class="divider mx-auto"></div>
                 <v-col class="desc text-center">
-                  <h5>{{ item.desc }}</h5>
+                  <h4>{{ item.desc }}</h4>
                 </v-col>
               </v-row>
             </v-col>
@@ -75,7 +75,6 @@ export default {
   background-color: #ff8906;
   width: 6rem;
   height: 2px;
-  text-align: center;
 }
 
 .desc {
