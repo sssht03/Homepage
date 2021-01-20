@@ -1,7 +1,7 @@
 <template>
-  <v-row class="skills pb-12">
+  <v-row class="skills pb-12 flex-column">
     <v-col>
-      <section-title :title="'Skills'"></section-title>
+      <section-title :title="'Skill'"></section-title>
     </v-col>
     <v-row>
       <v-col
@@ -9,7 +9,7 @@
         :key="i"
         cols="12"
         sm="6"
-        md="4"
+        md="6"
         lg="4"
         xl="4"
       >

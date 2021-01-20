@@ -3,7 +3,7 @@
     <Header></Header>
     <about></about>
     <career></career>
-    <skills></skills>
+    <skill></skill>
   </div>
 </template>
 
@@ -11,9 +11,9 @@
 import About from "./About.vue";
 import Career from "./Career.vue";
 import Header from "./Header.vue";
-import Skills from "./Skills.vue";
+import Skill from "./Skill.vue";
 export default {
   name: "Main",
-  components: { About, Career, Skills, Header },
+  components: { About, Career, Skill, Header },
 };
 </script>
