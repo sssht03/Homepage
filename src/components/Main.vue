@@ -122,6 +122,7 @@ export default {
 }
 .selected {
   color: #f25f4c;
+  font-size: larger;
 }
 </style>
 
