@@ -3,12 +3,12 @@
     <v-row>
       <v-col>
         <section-title :title="'About'"></section-title>
-        <v-row justify="center" class="py-6">
+        <v-row justify="center" class="py-4">
           <v-avatar size="10rem">
             <img src="@/assets/images/my_image.jpg" alt="My Image" />
           </v-avatar>
         </v-row>
-        <h1 class="text-center my-name py-6">SHUTA MATSUO</h1>
+        <h1 class="text-center my-name py-10">SHUTA MATSUO</h1>
         <v-container>
           <v-row justify="center">
             <v-col
@@ -48,15 +48,6 @@ export default {
       myProfile: [
         { title: "職業", desc: "学生" },
         { title: "所属", desc: "九州大学大学院\nシステム情報科学府" },
-        {
-          title: "研究室",
-          desc: "ヒューマノフィリック\nシステム研究室\n(荒川研)",
-        },
-        {
-          title: "研究テーマ",
-          desc:
-            "スマートウォッチを\n用いた継続的なセルフ\nストレスチェック手法",
-        },
         { title: "誕生日", desc: "1998/03/11" },
         { title: "出身地", desc: "長崎" },
         { title: "在住", desc: "福岡" },
