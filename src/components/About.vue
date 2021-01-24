@@ -1,5 +1,5 @@
 <template>
-  <v-container class="about pb-12 pt-12" fluid>
+  <v-container class="about py-12" fluid>
     <v-row>
       <v-col>
         <section-title :title="'About'"></section-title>
@@ -48,6 +48,15 @@ export default {
       myProfile: [
         { title: "職業", desc: "学生" },
         { title: "所属", desc: "九州大学大学院\nシステム情報科学府" },
+        {
+          title: "研究室",
+          desc: "ヒューマノフィリック\nシステム研究室\n(荒川研)",
+        },
+        {
+          title: "研究テーマ",
+          desc:
+            "スマートウォッチを\n用いた継続的なセルフ\nストレスチェック手法",
+        },
         { title: "誕生日", desc: "1998/03/11" },
         { title: "出身地", desc: "長崎" },
         { title: "在住", desc: "福岡" },

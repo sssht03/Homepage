@@ -1,10 +1,11 @@
 <template>
-  <v-app-bar fixed color="rgba(114, 117, 126, 0.7)">
+  <v-app-bar fixed color="rgba(114, 117, 126, 0.9)">
     <v-spacer></v-spacer>
     <v-row align-content="end">
       <v-btn
         text
-        small
+        :x-large="$vuetify.breakpoint.mdAndUp"
+        :small="$vuetify.breakpoint.smAndDown"
         v-for="(item, i) in contentsList"
         :key="i"
         :color="item.show ? '#fffffe' : '#000000'"
@@ -22,7 +23,7 @@ export default {
         { title: "about", show: false },
         { title: "career", show: false },
         { title: "skills", show: false },
-        { title: "product", show: false },
+        { title: "works", show: false },
       ],
     };
   },

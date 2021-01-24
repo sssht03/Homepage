@@ -1,6 +1,6 @@
 <template>
   <v-container class="products pb-12 pt-12" fluid>
-    <section-title :title="'Products'"></section-title>
+    <section-title :title="'Works'"></section-title>
     <!-- <v-row class="flex-column">
       <v-col class="subtitle text-center">
         <v-col>
