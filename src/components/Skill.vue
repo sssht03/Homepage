@@ -15,10 +15,9 @@
           xl="4"
         >
           <v-card
-            class="mx-auto py-6"
+            class="mx-auto py-6 skill-card"
             max-width="280"
             elevation="3"
-            color="#16161a"
             @click="item.show = !item.show"
             dark
           >
@@ -114,4 +113,8 @@ export default {
 .skills {
   background-color: #242629;
 }
+/* 
+.skill-card {
+  background-color: rgba();
+} */
 </style>
