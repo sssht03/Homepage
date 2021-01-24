@@ -9,13 +9,19 @@
         v-for="(item, i) in contentsList"
         :key="i"
         :color="item.show ? '#fffffe' : '#000000'"
-        >{{ item.title }}</v-btn
-      >
+        ><a href="#" v-scroll-to="`#${item.title}`">
+          {{ item.title }}
+        </a>
+      </v-btn>
     </v-row>
   </v-app-bar>
 </template>
 
 <script>
+import Vue from "vue";
+import VueScrollTo from "vue-scrollto";
+Vue.use(VueScrollTo);
+
 export default {
   data() {
     return {
