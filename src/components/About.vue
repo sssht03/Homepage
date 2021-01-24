@@ -1,14 +1,14 @@
 <template>
-  <v-container class="about pb-12 pt-12" fluid>
+  <v-container class="about py-12" fluid>
     <v-row>
       <v-col>
         <section-title :title="'About'"></section-title>
-        <v-row justify="center" class="py-6">
+        <v-row justify="center" class="py-4">
           <v-avatar size="10rem">
             <img src="@/assets/images/my_image.jpg" alt="My Image" />
           </v-avatar>
         </v-row>
-        <h1 class="text-center my-name py-6">SHUTA MATSUO</h1>
+        <h1 class="text-center my-name py-10">SHUTA MATSUO</h1>
         <v-container>
           <v-row justify="center">
             <v-col

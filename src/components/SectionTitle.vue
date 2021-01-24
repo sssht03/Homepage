@@ -1,5 +1,5 @@
 <template>
-  <h1 class="section-title py-8">{{ title }}</h1>
+  <h1 class="section-title py-8 text-center">{{ title }}</h1>
 </template>
 
 <script>
@@ -10,8 +10,7 @@ export default {
 
 <style>
 .section-title {
-  color: #a7a9be;
+  color: #f25f4c;
   font-size: 5rem;
-  text-align: center;
 }
 </style>
