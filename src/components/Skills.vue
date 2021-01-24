@@ -22,7 +22,12 @@
             dark
           >
             <v-layout justify-center>
-              <v-img :src="item.src" max-height="150" max-width="150"></v-img>
+              <v-img
+                :src="item.src"
+                :alt="item.name"
+                max-height="150"
+                max-width="150"
+              ></v-img>
             </v-layout>
             <v-card-title>{{ item.name }}</v-card-title>
             <v-row justify="space-between" class="mx-auto">
