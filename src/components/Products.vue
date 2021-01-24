@@ -1,13 +1,13 @@
 <template>
   <v-container class="products pb-12 pt-12" fluid>
     <section-title :title="'Products'"></section-title>
-    <v-row class="flex-column">
+    <!-- <v-row class="flex-column">
       <v-col class="subtitle text-center">
         <v-col>
           <h1>In Progress</h1>
         </v-col>
       </v-col>
-    </v-row>
+    </v-row> -->
     <v-container>
       <v-row justify="center">
         <v-col
@@ -18,6 +18,7 @@
           md="6"
           lg="6"
           xl="4"
+          class="pb-12"
         >
           <v-row class="flex-column">
             <v-col class="system-title text-center">
@@ -34,7 +35,7 @@
       </v-row>
     </v-container>
 
-    <v-row class="flex-column">
+    <!-- <v-row class="flex-column">
       <v-col class="subtitle text-center">
         <v-col>
           <h1>Past Works</h1>
@@ -66,7 +67,7 @@
           </v-row>
         </v-col>
       </v-row>
-    </v-container>
+    </v-container> -->
   </v-container>
 </template>
 
