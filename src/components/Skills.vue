@@ -73,7 +73,7 @@ export default {
           name: "Vue.js",
           subtitle: "フロントエンド開発",
           text:
-            "Vue2を使用したリアクティブな画面の実装経験があります。CSSフレームワークとしてVuetify, プラグインにVue-routerを使用した、ダッシュボードやセンサ情報表示のSPAを開発しています。",
+            "Vue2を使用したリアクティブ画面, レスポンシブ画面の実装経験があります。CSSフレームワークとしてVuetify, プラグインにVue-routerを使用した、ダッシュボードやセンサ情報表示のSPAを開発しています。",
           src: require("../assets/images/vue.png"),
           show: false,
         },
@@ -132,7 +132,7 @@ export default {
 @keyframes contentsFadeIn {
   0% {
     opacity: 0;
-    transform: translateX(15rem);
+    transform: translateY(15rem);
   }
   100% {
     opacity: 1;
