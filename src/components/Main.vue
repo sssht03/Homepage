@@ -16,7 +16,7 @@
                 v-scroll-to="`#${item.title}`"
                 @click="sectionSelect(i)"
               >
-                <div v-bind:class="{ selected: item.show }">
+                <div v-bind:class="{ selected: item.selected }">
                   {{ item.title }}
                 </div>
               </a>
@@ -25,10 +25,10 @@
         </v-container>
       </v-app-bar>
     </header>
-    <about id="about"></about>
-    <career id="career"></career>
-    <skills id="skills"></skills>
-    <products id="works"></products>
+    <about id="about" :show="this.contentsList[0].show"></about>
+    <career id="career" :show="this.contentsList[1].show"></career>
+    <skills id="skills" :show="this.contentsList[2].show"></skills>
+    <products id="works" :show="this.contentsList[3].show"></products>
     <Footer></Footer>
   </div>
 </template>
@@ -52,10 +52,10 @@ export default {
       scrollY: 0,
       sectionOffsetTop: [],
       contentsList: [
-        { title: "about", show: true },
-        { title: "career", show: false },
-        { title: "skills", show: false },
-        { title: "works", show: false },
+        { title: "about", show: true, selected: true },
+        { title: "career", show: false, selected: false },
+        { title: "skills", show: false, selected: false },
+        { title: "works", show: false, selected: false },
       ],
     };
   },
@@ -75,7 +75,8 @@ export default {
       for (var i = 0; i < this.contentsList.length; i++) {
         if (i == index) {
           this.contentsList[i].show = true;
-        } else this.contentsList[i].show = false;
+          this.contentsList[i].selected = true;
+        } else this.contentsList[i].selected = false;
       }
     },
     currentNavi() {
@@ -106,7 +107,7 @@ export default {
       targets.forEach((target) => {
         const element = document.getElementById(target);
         const offsetTop = Math.round(
-          window.scrollY + element.getBoundingClientRect().top - 60
+          window.scrollY + element.getBoundingClientRect().top - 150
         );
         this.sectionOffsetTop.push(offsetTop);
       });
@@ -120,6 +121,7 @@ export default {
   text-decoration: none;
   color: #fffffe;
 }
+
 .selected {
   color: #f25f4c;
   font-size: larger;

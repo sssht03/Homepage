@@ -1,41 +1,42 @@
 <template>
   <v-container class="products pb-12 pt-12" fluid>
-    <section-title :title="'Works'"></section-title>
-    <!-- <v-row class="flex-column">
+    <div :class="{ contents: !show }">
+      <section-title :title="'Works'" :show="this.show"></section-title>
+      <!-- <v-row class="flex-column">
       <v-col class="subtitle text-center">
         <v-col>
           <h1>In Progress</h1>
         </v-col>
       </v-col>
     </v-row> -->
-    <v-container>
-      <v-row justify="center">
-        <v-col
-          v-for="(item, i) in inprogress"
-          :key="i"
-          cols="12"
-          sm="6"
-          md="6"
-          lg="6"
-          xl="4"
-          class="pb-12"
-        >
-          <v-row class="flex-column">
-            <v-col class="system-title text-center">
-              <h3>
-                {{ item.title }}
-              </h3>
-            </v-col>
-            <div class="divider mx-auto my-4"></div>
-            <v-col class="system-desc text-center px-10">
-              <h4>{{ item.desc }}</h4>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
+      <v-container :class="{ contentsShow: show }">
+        <v-row justify="center">
+          <v-col
+            v-for="(item, i) in inprogress"
+            :key="i"
+            cols="12"
+            sm="6"
+            md="6"
+            lg="6"
+            xl="4"
+            class="pb-12"
+          >
+            <v-row class="flex-column">
+              <v-col class="system-title text-center">
+                <h3>
+                  {{ item.title }}
+                </h3>
+              </v-col>
+              <div class="divider mx-auto my-4"></div>
+              <v-col class="system-desc text-center px-10">
+                <h4>{{ item.desc }}</h4>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
 
-    <!-- <v-row class="flex-column">
+      <!-- <v-row class="flex-column">
       <v-col class="subtitle text-center">
         <v-col>
           <h1>Past Works</h1>
@@ -68,12 +69,14 @@
         </v-col>
       </v-row>
     </v-container> -->
+    </div>
   </v-container>
 </template>
 
 <script>
 import SectionTitle from "./SectionTitle.vue";
 export default {
+  props: ["show"],
   data() {
     return {
       inprogress: [
@@ -81,7 +84,7 @@ export default {
           title:
             "九大 × docomo\n「3密回避実証実験」\nPoC システム, モバイルアプリ開発",
           desc:
-            "九州大学とNTTdocomoによるポイント付与を用いての3密回避を促す実証実験で使用する, サーバやモバイルアプリなどのシステム開発に参加しています。主に九州大学の学生で構成される産学連携プラットフォームである「iQ Lab」として開発に携わっており, システム開発のみでなく, テスターの募集や実験シナリオの考案などの運営やサポート業務も行っています。",
+            "九州大学とNTTdocomoによる, ポイント付与を用いての3密回避を促す実証実験で使用するサーバやモバイルアプリなどのシステム開発に参加しています。主に九州大学の学生で構成される産学連携プラットフォームである「iQ Lab」として開発に携わっており, システム開発のみでなく, テスターの募集や実験シナリオの考案などの運営やサポート業務も行っています。",
           skill: [
             "Flutter",
             "Firebase Authentification",
@@ -93,7 +96,7 @@ export default {
         {
           title: "株式会社INNOVATION PLUS\nインターン\nPoC モバイルアプリ開発",
           desc:
-            "九州大学の学生とIoTを中心とした事業を展開する企業との産学連携とIOT Innovation創出を目的とした組織であるIOT INNOVATION Baseのプロジェクトの一環として, 株式会社INNOVATION PLUSでPoCモバイルアプリ開発インターンを行っています。サービスの予約や支払い, Bluetooth通信機能などが含まれます。",
+            "九州大学の学生とIoTを中心とした事業を展開する企業との, 産学連携とIOT Innovation創出を目的とした組織であるIOT INNOVATION Baseのプロジェクトの一環として, 株式会社INNOVATION PLUSでPoCモバイルアプリ開発インターンを行っています。サービスの予約や支払い, Bluetooth通信機能などが含まれます。",
           skill: ["Flutter"],
         },
         {
@@ -117,10 +120,6 @@ export default {
           skill: ["Vue", "Vuetify", "Python", "Flask", "Heroku"],
         },
         // { title: "", desc: "", skill: [] },
-        // { title: "", desc: "", skill: [] },
-        // { title: "", desc: "", skill: [] },
-        // { title: "", desc: "", skill: [] },
-        // { title: "", desc: "", skill: [] },
       ],
     };
   },
@@ -128,9 +127,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .products {
   background-color: #16161a;
+}
+
+.contents {
+  opacity: 0;
 }
 
 .subtitle {
@@ -144,9 +147,26 @@ export default {
 .divider {
   background-color: #ff8906;
   width: 6rem;
+  height: 2px;
 }
 
 .system-desc {
   color: #a7a9be;
+}
+
+.contentsShow {
+  opacity: 1;
+  animation: contentsFadeIn 1s;
+}
+
+@keyframes contentsFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 </style>

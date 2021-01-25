@@ -1,9 +1,9 @@
 <template>
   <v-container class="career pb-12" fluid>
-    <v-row>
+    <v-row :class="{ contents: !show }">
       <v-col>
-        <section-title :title="'Career'"></section-title>
-        <v-row justify="center">
+        <section-title :title="'Career'" :show="show"></section-title>
+        <v-row justify="center" :class="{ contentsShow: show }">
           <v-timeline
             align-top
             dark
@@ -39,6 +39,7 @@
 <script>
 import SectionTitle from "./SectionTitle.vue";
 export default {
+  props: ["show"],
   components: { SectionTitle },
   data() {
     return {
@@ -73,18 +74,40 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .career {
   background-color: #16161a;
+}
+
+.contents {
+  opacity: 0;
 }
 
 .career-year {
   color: #ff8906;
 }
+
 .career-desc {
   color: #94a1b2;
 }
+
 .timeline {
   z-index: 0;
+}
+
+.contentsShow {
+  opacity: 1;
+  animation: contentsFadeIn 1s;
+}
+
+@keyframes contentsFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <v-container class="skills pb-12" fluid>
-    <v-row class="flex-column">
+    <v-row class="flex-column" :class="{ contents: !show }">
       <v-col>
-        <section-title :title="'Skills'"></section-title>
+        <section-title :title="'Skills'" :show="this.show"></section-title>
       </v-col>
-      <v-row justify="center" class="ma-0">
+      <v-row justify="center" class="ma-0" :class="{ contentsShow: show }">
         <v-col
           v-for="(item, i) in skillList"
           :key="i"
@@ -22,7 +22,12 @@
             dark
           >
             <v-layout justify-center>
-              <v-img :src="item.src" max-height="150" max-width="150"></v-img>
+              <v-img
+                :src="item.src"
+                :alt="item.name"
+                max-height="150"
+                max-width="150"
+              ></v-img>
             </v-layout>
             <v-card-title>{{ item.name }}</v-card-title>
             <v-row justify="space-between" class="mx-auto">
@@ -51,6 +56,7 @@
 <script>
 import SectionTitle from "./SectionTitle.vue";
 export default {
+  props: ["show"],
   components: { SectionTitle },
   data() {
     return {
@@ -109,12 +115,28 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .skills {
   background-color: #242629;
 }
-/* 
-.skill-card {
-  background-color: rgba();
-} */
+
+.contents {
+  opacity: 0;
+}
+
+.contentsShow {
+  opacity: 1;
+  animation: contentsFadeIn 1s;
+}
+
+@keyframes contentsFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 </style>

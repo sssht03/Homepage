@@ -1,39 +1,43 @@
 <template>
   <v-container class="about py-12" fluid>
-    <v-row>
+    <v-row :class="{ contents: !show }">
       <v-col>
-        <section-title :title="'About'"></section-title>
-        <v-row justify="center" class="py-4">
-          <v-avatar size="10rem">
-            <img src="@/assets/images/my_image.jpg" alt="My Image" />
-          </v-avatar>
-        </v-row>
-        <h1 class="text-center my-name py-10">SHUTA MATSUO</h1>
-        <v-container>
-          <v-row justify="center">
-            <v-col
-              v-for="item in myProfile"
-              :key="item[1]"
-              cols="6"
-              sm="4"
-              md="4"
-              lg="4"
-              xl="4"
-            >
-              <v-row class="flex-column">
-                <v-col>
-                  <h3 class="title-text text-center">
-                    {{ item.title }}
-                  </h3>
-                </v-col>
-                <div class="divider mx-auto"></div>
-                <v-col class="desc text-center">
-                  <h4>{{ item.desc }}</h4>
+        <section-title :title="'About'" :show="this.show"></section-title>
+        <div :class="{ contentsShow: show }">
+          <v-row justify="center" class="py-4">
+            <v-avatar size="10rem">
+              <img src="@/assets/images/my_image.jpg" alt="My Image" />
+            </v-avatar>
+          </v-row>
+          <div>
+            <h1 class="text-center my-name py-10">SHUTA MATSUO</h1>
+            <v-container>
+              <v-row justify="center">
+                <v-col
+                  v-for="item in myProfile"
+                  :key="item[1]"
+                  cols="6"
+                  sm="4"
+                  md="4"
+                  lg="4"
+                  xl="4"
+                >
+                  <v-row class="flex-column">
+                    <v-col>
+                      <h3 class="title-text text-center">
+                        {{ item.title }}
+                      </h3>
+                    </v-col>
+                    <div class="divider mx-auto"></div>
+                    <v-col class="desc text-center">
+                      <h4>{{ item.desc }}</h4>
+                    </v-col>
+                  </v-row>
                 </v-col>
               </v-row>
-            </v-col>
-          </v-row>
-        </v-container>
+            </v-container>
+          </div>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -42,6 +46,7 @@
 <script>
 import SectionTitle from "./SectionTitle.vue";
 export default {
+  props: ["show"],
   components: { SectionTitle },
   data() {
     return {
@@ -58,11 +63,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .about {
   background-color: #242629;
   padding-top: 50px;
 }
+
+.contents {
+  opacity: 0;
+}
+
 .my-name {
   color: #fffffe;
 }
@@ -79,5 +89,21 @@ export default {
 
 .desc {
   color: #94a1b2;
+}
+
+.contentsShow {
+  opacity: 1;
+  animation: contentsFadeIn 2s;
+}
+
+@keyframes contentsFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 </style>
