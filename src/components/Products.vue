@@ -99,7 +99,7 @@ export default {
         },
         {
           title:
-            "バス停混雑度可視化システム itocon\nフロント, モバイルアプリ開発",
+            "バス停混雑度可視化システム\nitocon\nフロント, モバイルアプリ開発",
           desc:
             "九州大学システム情報科学府ヒューマノフィリック研究室のプロジェクトであるバス停の混雑度をリアルタイムで可視化するアプリのシステム開発に参加しています。プロジェクト発足時の対象バス停は4つのみでしたが, 設置センサが増えることやページ更新の効率を考えVue.jsを用いてページビューを再設計しました。また, お気に入りバス停やユーザへの通知機能などの拡張性を持たせるためにiOS/Android対応のモバイルアプリも開発中です。",
           skills: [
@@ -109,7 +109,7 @@ export default {
             "Firebase Cloud Messaging",
           ],
           links: [
-            { desc: "itocon", link: "https://hub.arakawa-lab.com/itocon" },
+            // { desc: "itocon", link: "https://hub.arakawa-lab.com/itocon" },
             { desc: "研究室ページ", link: "https://arakawa-lab.com/itocon/" },
           ],
         },
