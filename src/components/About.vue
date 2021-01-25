@@ -93,17 +93,17 @@ export default {
 
 .contentsShow {
   opacity: 1;
-  animation: contentsFadeIn 2s;
+  animation: contentsFadeIn 1s;
 }
 
 @keyframes contentsFadeIn {
   0% {
     opacity: 0;
-    transform: translate(0);
+    transform: translateX(15rem);
   }
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translateX(0);
   }
 }
 </style>
