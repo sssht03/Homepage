@@ -28,6 +28,13 @@
               <v-col class="system-desc text-center px-10">
                 <h4>{{ item.desc }}</h4>
               </v-col>
+              <!-- term -->
+              <v-col class="subtitle text-center mt-6 mb-3"
+                ><h3>期間</h3></v-col
+              >
+              <v-col class="system-desc text-center px-10 py-0">
+                <h4>{{ item.term }}</h4>
+              </v-col>
               <!-- skills -->
               <v-col class="subtitle text-center mt-6 mb-3"
                 ><h3>使用スキル</h3></v-col
@@ -76,15 +83,10 @@ export default {
         {
           title:
             "九大 × docomo\n「3密回避実証実験」\nPoC システム, モバイルアプリ開発",
+          term: "2020/9 ~",
           desc:
-            "九州大学とNTTdocomoによる, ポイント付与を用いての3密回避を促す実証実験で使用するサーバやモバイルアプリなどのシステム開発に参加しています。主に九州大学の学生で構成される産学連携プラットフォームである「iQ Lab」として開発に携わっており, システム開発のみでなく, テスターの募集や実験シナリオの考案などの運営やサポート業務も行っています。",
-          skills: [
-            "Flutter",
-            "Firebase Authentification",
-            "Firebase Analytics",
-            "Firebase Cloud Messaging",
-            "Firebase Dynamic Links",
-          ],
+            "九州大学とNTTdocomoによる, ポイント付与を用いての3密回避を促す実証実験で使用するサーバやモバイルアプリなどのシステム開発に参加しています。主に九州大学の学生で構成される産学連携プラットフォームである「iQ Lab」と言う組織のエンジニアチームとしてシステムの開発や業務効率改善ツールの作成などに携わっています。 iQ Lab はシステム開発や実験シナリオの考案と運営, テスターの募集などを行っています。 エンジニアチームは実験で用いられるクロスプラットフォームでのモバイルアプリやデータベース, API サーバの設計から開発, 運用まで一貫して行っています。 特に私はモバイルアプリ開発をメインで担当しており, フレームワークとして Flutter を用いています。デザイナーチームと UI 設計について議論しながら画面の開発, API サーバとの連携を行っています。また、私はプロジェクト全体のマネジメント業務も行っており、エンジニア班以外の企画、広報班の進捗管理やミーティングの設定と進行、さらに企業や大学の研究者の方々への報告や実験を進めるにあたっての相談、議論にも参加しています。",
+          skills: ["Flutter", "Firebase"],
           links: [
             {
               desc: "プレスリリース",
@@ -100,23 +102,20 @@ export default {
         {
           title:
             "バス停混雑度可視化システム\nitocon\nフロント, モバイルアプリ開発",
+          term: "2020/06 ~",
           desc:
-            "九州大学システム情報科学府ヒューマノフィリック研究室のプロジェクトであるバス停の混雑度をリアルタイムで可視化するアプリのシステム開発に参加しています。プロジェクト発足時の対象バス停は4つのみでしたが, 設置センサが増えることやページ更新の効率を考えVue.jsを用いてページビューを再設計しました。また, お気に入りバス停やユーザへの通知機能などの拡張性を持たせるためにiOS/Android対応のモバイルアプリも開発中です。",
-          skills: [
-            "Vue.js",
-            "vuetify(CSS Framework)",
-            "Flutter",
-            "Firebase Cloud Messaging",
-          ],
+            "九州大学システム情報科学府ヒューマノフィリック研究室のプロジェクトであるバス停の現在や予測される混雑度、食堂の混雑度をリアルタイムで可視化するwebアプリのシステム開発にチームリーダーとして参加しています。プロジェクト発足時の対象バス停は4つのみでしたが, 設置センサが増えることやページ更新の効率を考えVue.jsを用いてページビューを再設計しました。大学の総長や理事から大学全体へ周知したいとの要望をいただくことがあり、バス停11箇所と食堂5箇所へのアップデートを授業が始まっている中、約1ヶ月で行いました。この情報はサイネージとしてキャンパス全体に設置案が出ており, 混雑度情報を見た学生の行動変容が起こるかの研究が開始される予定です。また, お気に入りのバス停/食堂の登録やユーザへの通知機能などの拡張性を持たせるためにiOS/Android対応のモバイルアプリも開発中予定です。",
+          skills: ["Vue.js", "Vuetify", "Flutter"],
           links: [
-            // { desc: "itocon", link: "https://hub.arakawa-lab.com/itocon" },
+            { desc: "itocon", link: "https://hub.arakawa-lab.com/itocon" },
             { desc: "研究室ページ", link: "https://arakawa-lab.com/itocon/" },
           ],
         },
         {
           title: "株式会社INNOVATION PLUS\nインターン\nPoC モバイルアプリ開発",
+          term: "2020/12 ~ 2021/4",
           desc:
-            "九州大学の学生とIoTを中心とした事業を展開する企業との, 産学連携とIOT Innovation創出を目的とした組織であるIOT INNOVATION Baseのプロジェクト(IOTII)の一環として, 株式会社INNOVATION PLUSでPoCモバイルアプリ開発インターンを行っています。サービスの予約や支払い, Bluetooth通信機能などが含まれます。",
+            "九州大学の学生とIoTを中心とした事業を展開する企業との, 産学連携とIOT Innovation創出を目的とした組織であるIOT INNOVATION Baseのプロジェクト（IOTII）の一環として, 株式会社INNOVATION PLUSでPoCモバイルアプリ開発インターン経験があります。Flutter によるクロスプラットフォームで開発を行い, UI プロトタイプや画面設計書からモデルやUI画面に落とし込んだ結果を踏まえての改善点の議論や, アプリ内で使用する Bluetooth 機能の調査, テスト実装などに携わっていました。 INNOVATION PLUS のオフィスは東京にあり, 私が在住する福岡から離れているため全ての業務, ミーティングをオンラインで行いました。",
           skills: ["Flutter"],
           links: [{ desc: "IOT II", link: "https://www.iotii.org/" }],
         },
@@ -128,7 +127,6 @@ export default {
             "保存されているCSVデータから条件を複数選択して情報を表示させるダッシュボードを作成しました。フロントをVue.js, バックエンドをPythonフレームワークであるFlaskを使用しています",
           skill: ["Vue", "Vuetify", "Python", "Flask", "Heroku"],
         },
-        // { title: "", desc: "", skill: [] },
       ],
     };
   },
