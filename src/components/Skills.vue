@@ -65,7 +65,7 @@ export default {
           name: "Flutter",
           subtitle: "モバイル開発",
           text:
-            "iOS, Android対応モバイルアプリケーションの開発経験があります。\nワイヤーフレームワークをもとにしたUI実装, providerを使用したMVVM開発, バックエンドでのサーバとの通信の実装などを行っています。",
+            "iOS, Android対応モバイルアプリケーションの開発経験があります。\nワイヤーフレームワークをもとにしたUI実装, providerを使用したMVVM開発, バックエンドでのサーバとの通信の実装などを行っています。Google PlayやTest Flightでの配信経験もあります。",
           src: require("../assets/images/flutter.png"),
           show: false,
         },
@@ -73,7 +73,7 @@ export default {
           name: "Vue.js",
           subtitle: "フロントエンド開発",
           text:
-            "Vue2を使用したリアクティブ画面, レスポンシブ画面の実装経験があります。CSSフレームワークとしてVuetify, プラグインにVue-routerを使用した、ダッシュボードやセンサ情報表示のSPAを開発しています。",
+            "Vue2を使用したリアクティブ画面, レスポンシブ画面の実装経験があります。CSSフレームワークとしてVuetify, プラグインにVue-routerを使用した、まとまった情報を絞り込み検索で表示させるダッシュボードやセンサ情報表示のSPAを開発しています。",
           src: require("../assets/images/vue.png"),
           show: false,
         },
